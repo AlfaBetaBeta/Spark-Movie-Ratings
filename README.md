@@ -46,10 +46,8 @@ Following the preliminary data exploration presented so far, a basic investigati
 
 The classic 'pure' genres `Drama` and `Comedy` predominantly appear on all rating levels, even though there are roughly 1,000 genre combinations (separated by pipes in the `movies` dataset). To some extent this could be expected since these two 'pure' genres account approximately for 20% of all movies in the dataset.
 
-<p align="justify">
-  <img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/rating-per-genre.png" width=30% height=30%>
-  <img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/count-per-genre.png" width=40% height=40%>
-</p>
+<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/rating-per-genre.png" width=30% height=30%>
+<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/count-per-genre.png" width=40% height=40%>
 
 The top 10 most/least rated genres are also shown below for further illustration.
 
@@ -59,7 +57,7 @@ The top 10 most/least rated genres are also shown below for further illustration
 
 ### What is the predominant tag per genre and the most tagged genres?
 
-<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/tags-per-genre.png" width=65% height=65%>
+<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/tags-per-genre.png" width=55% height=55%>
 
 About half of the most frequent tags are actually platform related, as they refer to the corresponding movie queue status instead of the movie contents. This may be convenient for the users, since it facilitates their movie list handling but it is not always relevant beyond this context. Tag insights can only be generated if they actually refer to the movie contents filtered by the tagging user experience of the movie. This also invalidates tags that simply repeat the movie genre.
 
@@ -69,7 +67,7 @@ As expected, `Drama` and `Comedy` appear in a notable majority of the most tagge
 
 Consider the top 10 movies in terms of the number of ratings (top) and the average rating (bottom, based on movies with more than 30 ratings) shown below.
 
-<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/top10-rating-count.png" width=70% height=70%>
+<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/top10-rating-count.png" width=65% height=65%>
 <img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/top10-rating-average.png" width=100% height=100%>
 
 It is interesting to remark that only one movie appears in both lists (`Shawshank Redemption`), which clearly suggests that a distinction must be made between movies that are greatly appreciated and movies that are widely watched. In essence, and leaving aside many other possible considerations, these two groups would correspond to classics (high average rating by active users) versus blockbusters (high rating count).
@@ -98,14 +96,14 @@ A collaborative-filtering based engine is trained with the aim of predicting rat
 
 Focus is hence shifted to retrieving the top recommendation for the most active users (i.e. with the largest number of ratings). That is, retrieving the movie with highest predicted rating for that selected set of users. Such set is summarised below for reference, together with the recommendations.
 
-<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/ratings-active-users.png" width=60% height=60%>
+<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/ratings-active-users.png" width=50% height=50%>
 <img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/recommendations-active-users.png" width=100% height=100%>
 
 The rating is considered a continuous variable, as can be seen by the predictions going beyond the theoretical upper bound (5.0). Consistently with the recommendation being the top one per user, all predicted ratings are considerably above their historical average.
 
 If focus is placed on the release year, with the exception of users 474 and 288 (whereby interestingly these two have the lowest average movie year), all other users are suggested to watch older movies than the average they rate. This is consistent with the previous finding that there are notably less movies from past decades but they are more likely to be appreciated by active users. This is also reinforced by the fact that all users have been exposed to older movies (from the 30s or earlier) before.
 
-<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/movie-year-active-users.png" width=75% height=75%>
+<img src="https://github.com/AlfaBetaBeta/Spark-Movie-Ratings/blob/master/img/movie-year-active-users.png" width=70% height=70%>
 
 
 ## Conclusions
