@@ -1,5 +1,15 @@
 # Movie rating database analysis
 
+* [Introduction and background description](https://github.com/AlfaBetaBeta/Spark-Movie-Ratings#introduction-and-background-description)
+* [Scope and purpose of the analysis](https://github.com/AlfaBetaBeta/Spark-Movie-Ratings#scope-and-purpose-of-the-analysis)
+* [Analysis](https://github.com/AlfaBetaBeta/Spark-Movie-Ratings#analysis)
+    * [What is the predominant (frequency based) genre per rating level?](https://github.com/AlfaBetaBeta/Spark-Movie-Ratings#what-is-the-predominant-frequency-based-genre-per-rating-level)
+    * [What is the predominant tag per genre and the most tagged genres?](https://github.com/AlfaBetaBeta/Spark-Movie-Ratings#what-is-the-predominant-tag-per-genre-and-the-most-tagged-genres)
+    * [What are the most predominant (popularity based) movies?](https://github.com/AlfaBetaBeta/Spark-Movie-Ratings#what-are-the-most-predominant-popularity-based-movies)
+    * [Do popular movies belong to a particular time frame?](https://github.com/AlfaBetaBeta/Spark-Movie-Ratings#do-popular-movies-belong-to-a-particular-time-frame)
+    * [What would a basic recommendation engine predict for selected users?](https://github.com/AlfaBetaBeta/Spark-Movie-Ratings#what-would-a-basic-recommendation-engine-predict-for-selected-users)
+* [Conclusions](https://github.com/AlfaBetaBeta/Spark-Movie-Ratings#conclusions)
+
 ## Introduction and background description
 
 This repository aims at concisely summarising the analysis process of a movie rating dataset elaborated in `movieRatingsEDA.ipynb` and presenting the conclusions arising from such analysis. The dataset considered is well known in the technical literature, it stems from a [movie recommendation service](http://movielens.org/) and constitutes an established research asset, publicly available provided appropriate referencing is made.
